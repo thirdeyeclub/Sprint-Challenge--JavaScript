@@ -1,0 +1,13 @@
+1. Describe the biggest difference between `.forEach` & `.map`.
+.map creates a bew array then returns it to you!
+2. What is the difference between a function and a method?
+methods are just function inside the scope of an object.
+3. What is closure?
+when an inner fuction  has  access to an outside variable
+4. Describe the four rules of the 'this' keyword.
+1. Window. Whenever the function is conatined in the global scope. .this always becomes the window unless we change it. 
+2. Implicit  Binding. allows you to use what is inside of an object. used inside of an Object.
+3. Constructer Functions Used to consturct thing. uses new bindings
+4. Using explisict methods. Using .call or . apply
+5. Why do we need super() in an extended class? 
+To use the functions, contents of the class that  our new class extends from
