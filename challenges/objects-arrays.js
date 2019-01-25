@@ -115,6 +115,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+for (let animals of zooAnimals) animalNames.push(`${animals.scientific_name}, whose non science name is ${animals.animal_name}`)
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -124,6 +125,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map((animal) => {lowerCase.push(animal.animal_name.toLowerCase());})
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -132,7 +134,10 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const largerPopulation = [];
-console.log(largerPopulation);
+zooAnimals.filter((animal) => {
+  if (animal.population < 5) {
+    largerPopulation.push(`${animal.animal_name} has a  low pop`);
+  }});
 
 /* Request 4: .reduce() 
 
@@ -140,12 +145,14 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 const populationTotal = 0;
+let populationTotal = zooAnimals.reduce((x, y) => x + y.population, 0);
 console.log(populationTotal);
 
+//idk if i did this right it was working then t stopped working
 
 /* 
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
+DONE!!!!
 */
 
