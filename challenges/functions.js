@@ -6,7 +6,7 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-const highfunction = 
+const consume = 
 (argument1,argument2,cb) =>{
   return cb(argument1,argument2);
 };
@@ -29,16 +29,16 @@ const greeting = (first, last) => {
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+ consume(2,2,sum); // 4
+ consume(10,16,multi); // 160
+ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: Because when it doesn't find a variable itself it goes up the chain looking for the variable. 
 
 
 const external = "I'm outside the function";
