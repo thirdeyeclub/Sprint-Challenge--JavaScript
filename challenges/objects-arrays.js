@@ -148,7 +148,7 @@ const populationTotal = 0;
 let populationTotal = zooAnimals.reduce((x, y) => x + y.population, 0);
 console.log(populationTotal);
 
-//idk if i did this right it was working then t stopped working
+//idk if i did this right it was working then it stopped working
 
 /* 
 
